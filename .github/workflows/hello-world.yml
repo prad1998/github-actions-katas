@@ -50,7 +50,7 @@ jobs:
            Path: .
        - name: Ccomponent test 
          run: chmod +x ci/component-test.sh && GIT_COMMIT="GA-$GITHUB_SHA" && ci/component-test.sh  
-#nwqmd
+         
   Performance-test: 
      needs: Docker-image  
      runs-on: ubuntu:latest
