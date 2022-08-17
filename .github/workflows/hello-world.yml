@@ -41,7 +41,7 @@ jobs:
     
   Component-test: 
       needs: Docker-image
-      runs-on: ubuntu:latest
+      runs-on: self-hosted
       steps:
        - name: Download code
          uses: actions/download-artifact@v1
