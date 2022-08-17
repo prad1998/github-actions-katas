@@ -41,6 +41,7 @@ jobs:
     
   Component-test: 
       needs: Docker-image
+      runs-on: ubuntu:latest
       steps:
        - name: Download code
          uses: actions/download-artifact@v1
@@ -51,7 +52,8 @@ jobs:
          run: chmod +x ci/component-test.sh && GIT_COMMIT="GA-$GITHUB_SHA" && ci/component-test.sh  
 
   Performance-test: 
-     needs: Docker-image 
+     needs: Docker-image  
+     runs-on: ubuntu:latest
      steps:
      - name: Download code
        uses: actions/download-artifact@v1
