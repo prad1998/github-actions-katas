@@ -3,6 +3,7 @@ name: JAVA CI
 on: push
 jobs:
   Clone-down:
+    name: Clone down repo
     runs-on: ubuntu-latest
     container: gradle:6-jdk11
     steps:
@@ -20,8 +21,8 @@ jobs:
      - name: Download code
         uses: actions/download-artifact@v2
         with:
-          name: code
-          path: .  
+         name: code
+         path: .  
       - name: my-step
         run: ci/build-app.sh
       - name: Test 
